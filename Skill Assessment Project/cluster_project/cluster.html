@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Assessment</title>
+  <link rel="stylesheet" href="cluster.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Skill Assessment Form</h1>
+    <form id="userForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="mail">Mail ID</label>
+      <input type="email" id="mail" name="mail" required>
+
+      <label for="department">Department</label>
+      <input type="text" id="department" name="department" required>
+
+      <label for="projectLinks">Project Links</label>
+      <textarea id="projectLinks" name="projectLinks" rows="3" required></textarea>
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <label for="profileImage">Upload Profile Image</label>
+      <input type="file" id="profileImage" accept="image/*" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div id="profile" class="hidden">
+    <h2>Personal Profile</h2>
+    <div class="profile-details">
+      <img id="displayImage" alt="Profile Image">
+       <p><strong>Username:</strong> <span id="displayUsername"></span></p>
+      <p><strong>Mail ID:</strong> <span id="displayMail"></span></p> 
+      <p><strong>Department:</strong> <span id="displayDepartment"></span></p>
+      <p><strong>Project Links:</strong> <span id="displayProjects"></span></p>
+      <p><strong>Description:</strong> <span id="displayDescription"></span></p>
+    </div>
+    <button onclick="resetForm()">Go Back</button>
+  </div>
+
+  <script src="cluster.js"></script>
+</body>
+</html>
